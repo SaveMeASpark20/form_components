@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+}
+.toggle-switch {
+  display: flex;
+  align-items: center;
+}
+
+.toggle-switch label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.toggle-switch input {
+  display: none;
+}
+
+.toggle-switch .slider {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 20px;
+  margin-right: 10px;
+  transition: background-color 0.2s;
+}
+
+.toggle-switch .slider::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: white;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.2s;
+}
+
+.toggle-switch input:checked + .slider {
+  background-color: #646cffec;
+}
+
+.toggle-switch input:checked + .slider::before {
+  transform: translateX(20px);
+}
+
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  
+}
+
+.dropdown label {
+  margin-bottom: 0.5rem;
+}
+
+.dropdown select {
+  padding: 0.5rem;
+  border: 1px solid #646cffec;
+  border-radius: 4px;
+}
+
+
+form .input_text {
+  display: block;
+  border: 2px solid #646cffaa;
+  border-radius: 20px;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  min-width: 300px;
+}
+
+form .input-text{
+  border: 3px solid #646cffaa;
+  outline: none;
+}
+
+textarea {
+  width: 80%;
+  height: 150px;
+  padding: 12px 20px;
+  
+  border: 2px solid #646cffaa;
+  border-radius: 4px;
+  resize: none;
+}
